@@ -1,0 +1,6 @@
+  name: HardMob
+  main: org.mable4th.hardmob.Main
+  version: 1.0
+  author: mable4th
+  api-version: 1.18
+  description: Plugin on HardMob!
