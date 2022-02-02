@@ -18,12 +18,12 @@ public class SkeletSpawnEvent implements Listener {
     public void onSkeletEvent(EntitySpawnEvent event) {
 
         if (event.getEntity().getType() == EntityType.SKELETON) {
-
             Random random = new Random();
 
             if (Math.abs(random.nextInt()) % max1 >= 90) {
 
                 Skeleton skeleton = (Skeleton) event.getEntity();
+
 
                 ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET); //Шлем
                 ItemStack chestplate = new ItemStack(Material.DIAMOND_CHESTPLATE); //Нагудник
@@ -38,6 +38,7 @@ public class SkeletSpawnEvent implements Listener {
 
                 Skeleton skeleton = (Skeleton) event.getEntity();
 
+
                 ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET); //Шлем
                 ItemStack leggings = new ItemStack(Material.DIAMOND_LEGGINGS); //Поножи
                 ItemStack boots = new ItemStack(Material.DIAMOND_BOOTS); //Ботинки
@@ -49,6 +50,7 @@ public class SkeletSpawnEvent implements Listener {
             } else if (Math.abs(random.nextInt()) % max1 >= 20 ) {
 
                 Skeleton skeleton = (Skeleton) event.getEntity();
+
 
                 ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET); //Шлем
                 ItemStack boots = new ItemStack(Material.DIAMOND_BOOTS); //Ботинки

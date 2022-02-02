@@ -31,6 +31,7 @@ public class ZoomieSpawnEvent implements Listener {
 
                 Zombie zombie = (Zombie) event.getEntity();
 
+
                 ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET); //Шлем
                 ItemStack chestplate = new ItemStack(Material.DIAMOND_CHESTPLATE); //Нагудник
                 ItemStack leggings = new ItemStack(Material.DIAMOND_LEGGINGS); //Поножи
@@ -40,9 +41,11 @@ public class ZoomieSpawnEvent implements Listener {
                 zombie.getEquipment().setChestplate(chestplate);
                 zombie.getEquipment().setLeggings(leggings);
                 zombie.getEquipment().setBoots(boots);
+
             } else if (Math.abs(random.nextInt()) % max1 >= 80) {
 
                 Zombie zombie = (Zombie) event.getEntity();
+
 
                 ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET); //Шлем
                 ItemStack leggings = new ItemStack(Material.DIAMOND_LEGGINGS); //Поножи
@@ -55,6 +58,7 @@ public class ZoomieSpawnEvent implements Listener {
             } else if (Math.abs(random.nextInt()) % max1 >= 20 ) {
 
                 Zombie zombie = (Zombie) event.getEntity();
+
 
                 ItemStack helmet = new ItemStack(Material.DIAMOND_HELMET); //Шлем
                 ItemStack boots = new ItemStack(Material.DIAMOND_BOOTS); //Ботинки

@@ -17,12 +17,12 @@ public class PiglinsSpawnEvent implements Listener {
     @EventHandler
     public void onPiglinsEvent(EntitySpawnEvent event) {
         if (event.getEntity().getType() == EntityType.PIGLIN) {
-
             Random random = new Random();
 
             if (Math.abs(random.nextInt()) % max1 >= 95) {
 
                 Piglin piglin = (Piglin) event.getEntity();
+
 
                 ItemStack helmet = new ItemStack(Material.NETHERITE_HELMET); //Шлем
                 ItemStack chestplate = new ItemStack(Material.NETHERITE_CHESTPLATE); //Нагудник
@@ -33,9 +33,11 @@ public class PiglinsSpawnEvent implements Listener {
                 piglin.getEquipment().setChestplate(chestplate);
                 piglin.getEquipment().setLeggings(leggings);
                 piglin.getEquipment().setBoots(boots);
+
             } else if (Math.abs(random.nextInt()) % max1 >= 80) {
 
                 Piglin piglin = (Piglin) event.getEntity();
+
 
                 ItemStack chestplate = new ItemStack(Material.NETHERITE_CHESTPLATE); //Нагудник
 
@@ -70,6 +72,7 @@ public class PiglinsSpawnEvent implements Listener {
                 Piglin piglin = (Piglin) event.getEntity();
                 ItemStack itemStack = new ItemStack(Material.NETHERITE_SWORD); //Меч
 
+
                 piglin.getEquipment().setItemInMainHand(itemStack);
 
             } else if (Math.abs(random.nextInt()) % max1 >= 60) {
@@ -77,9 +80,13 @@ public class PiglinsSpawnEvent implements Listener {
                 Piglin piglin = (Piglin) event.getEntity();
                 ItemStack itemStack = new ItemStack(Material.DIAMOND_SWORD); //Меч
 
+
                 piglin.getEquipment().setItemInMainHand(itemStack);
 
             }
+
         }
+
     }
+
 }
