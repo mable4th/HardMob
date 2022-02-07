@@ -15,6 +15,7 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new PiglinsSpawnEvent(), this);      //    *   Ивенты   *
         Bukkit.getPluginManager().registerEvents(new BrutePiglinSpawnEvent(), this); //     *____________*
         Bukkit.getPluginManager().registerEvents(new WitherSkeletonSpawnEvent(), this);
+        Bukkit.getPluginManager().registerEvents(new RaidZombieBlock(), this);
 
         getServer().getConsoleSender().sendMessage(ChatColor.RED + "[HardMob] " + ChatColor.GREEN + "Plugin is Enabled!");
     }

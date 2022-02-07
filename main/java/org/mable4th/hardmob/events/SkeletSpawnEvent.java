@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class SkeletSpawnEvent implements Listener {
 
-    int max1 = 100;
+    int max = 100;
 
     @EventHandler
     public void onSkeletEvent(EntitySpawnEvent event) {
@@ -20,7 +20,7 @@ public class SkeletSpawnEvent implements Listener {
         if (event.getEntity().getType() == EntityType.SKELETON) {
             Random random = new Random();
 
-            if (Math.abs(random.nextInt()) % max1 >= 90) {
+            if (Math.abs(random.nextInt()) % max >= 90) {
 
                 Skeleton skeleton = (Skeleton) event.getEntity();
 
@@ -34,7 +34,7 @@ public class SkeletSpawnEvent implements Listener {
                 skeleton.getEquipment().setChestplate(chestplate);
                 skeleton.getEquipment().setLeggings(leggings);
                 skeleton.getEquipment().setBoots(boots);
-            } else if (Math.abs(random.nextInt()) % max1 >= 80) {
+            } else if (Math.abs(random.nextInt()) % max >= 80) {
 
                 Skeleton skeleton = (Skeleton) event.getEntity();
 
@@ -47,7 +47,7 @@ public class SkeletSpawnEvent implements Listener {
                 skeleton.getEquipment().setLeggings(leggings);
                 skeleton.getEquipment().setBoots(boots);
 
-            } else if (Math.abs(random.nextInt()) % max1 >= 20 ) {
+            } else if (Math.abs(random.nextInt()) % max >= 20 ) {
 
                 Skeleton skeleton = (Skeleton) event.getEntity();
 
@@ -57,7 +57,6 @@ public class SkeletSpawnEvent implements Listener {
 
                 skeleton.getEquipment().setHelmet(helmet);
                 skeleton.getEquipment().setBoots(boots);
-
             }
 
         }

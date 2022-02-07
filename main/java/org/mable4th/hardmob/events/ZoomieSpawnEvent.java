@@ -20,14 +20,14 @@ import java.util.Random;
 
 public class ZoomieSpawnEvent implements Listener {
 
-    int max1 = 100;
+    int max = 100;
 
     @EventHandler
     public void onZombieSpawn(EntitySpawnEvent event) {
     if (event.getEntity().getType() == EntityType.ZOMBIE) {
         Random random = new Random();
 
-            if (Math.abs(random.nextInt()) % max1 >= 90) {
+            if (Math.abs(random.nextInt()) % max >= 90) {
 
                 Zombie zombie = (Zombie) event.getEntity();
 
@@ -42,7 +42,7 @@ public class ZoomieSpawnEvent implements Listener {
                 zombie.getEquipment().setLeggings(leggings);
                 zombie.getEquipment().setBoots(boots);
 
-            } else if (Math.abs(random.nextInt()) % max1 >= 80) {
+            } else if (Math.abs(random.nextInt()) % max >= 80) {
 
                 Zombie zombie = (Zombie) event.getEntity();
 
@@ -55,7 +55,7 @@ public class ZoomieSpawnEvent implements Listener {
                 zombie.getEquipment().setLeggings(leggings);
                 zombie.getEquipment().setBoots(boots);
 
-            } else if (Math.abs(random.nextInt()) % max1 >= 20 ) {
+            } else if (Math.abs(random.nextInt()) % max >= 20 ) {
 
                 Zombie zombie = (Zombie) event.getEntity();
 
@@ -65,7 +65,6 @@ public class ZoomieSpawnEvent implements Listener {
 
                 zombie.getEquipment().setHelmet(helmet);
                 zombie.getEquipment().setBoots(boots);
-
             }
 
         }
